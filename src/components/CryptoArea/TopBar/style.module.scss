@@ -1,0 +1,42 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.13);
+    border-radius: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &__name,
+    &__fullname,
+    &__price {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    &__name {
+        flex-basis: 25%;
+        margin-left: 35px;
+    }
+    &__fullname {
+        flex-basis: 35%;
+    }
+    &__price {
+        flex-basis: 35%;
+        position: relative;
+        cursor: pointer;
+
+        img {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            transform: rotate(90deg);
+            transition: 0.2s;
+        }
+        .sorted {
+            transform: rotate(-90deg);
+        }
+    }
+}
